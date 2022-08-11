@@ -91,10 +91,12 @@ function draw() {
     rect(0, windowHeight/2, windowWidth/2, windowHeight/2);
     fill(0);
     textSize(20);
-    text('Data Population', +windowWidth/4, ((windowHeight/4)*2)+50);
+    text('Data Population', windowWidth/4, ((windowHeight/4)*2)+50);
 
     fill(240, 150, 200);
     rect(windowWidth/2, windowHeight/2, windowWidth/2, windowHeight/2);
+    fill(0);
+    text('Data Population', (windowWidth/4)*3, ((windowHeight/4)*2)+50);
 
     //text(users.results[0].name.first, 10, 10);
     if(data1 != null) {
@@ -154,6 +156,13 @@ function draw() {
         fill(0);
         imageMode(CENTER)
         image(data5, (windowWidth/4)*3, (windowHeight/4)*3, 230, 230);
+        rectMode(CENTER);
+        fill(255);
+        rect((windowWidth/4)*3, ((windowHeight/4)*3)+145, 130, 40);
+        fill(255, 80, 80);
+        textSize(14)
+        text('Generate dog', (windowWidth/4)*3, ((windowHeight/4)*3)+150);
+        rectMode(CORNER);
         }
 
     newCursor();
@@ -173,6 +182,14 @@ function mouseClicked(){
         fetch(URL3)
         .then(response => response.json())
         .then(data => {data3 = data})
+        .catch(error => console.error('Error', error))
+    }
+
+    if(pmouseX > ((windowWidth/4)*3)-65 && pmouseX < ((windowWidth/4)*3)+65 &&
+    pmouseY > ((windowHeight/4)*3)+130 && pmouseY < ((windowHeight/4)*3)+170){
+        fetch(URL5)
+        .then(response => response.json())
+        .then(data => {data5 = loadImage(data.message)})
         .catch(error => console.error('Error', error))
     }
 
