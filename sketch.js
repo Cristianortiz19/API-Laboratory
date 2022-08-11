@@ -152,7 +152,7 @@ function draw() {
             textSize(12);
             text(data4.data[x].Year, xPos+120, yPos +12);
             fill(255, 0, 0);
-            textSize(18Ter);
+            textSize(18);
             text(data4.data[0].Population, xPos+120, yPos +30);
         }
     }
