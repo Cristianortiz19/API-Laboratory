@@ -137,6 +137,17 @@ function draw() {
         textAlign(CENTER);
         textSize(20);
         text(data4.data[0].Nation,windowWidth/4, 120 + (windowHeight/4) *2);
+        let xPos = -100;
+        let yPos = 420;
+        for (let x = 0; x < 7; x++) {
+            xPos += 130;
+            if(xPos > 170) {
+                xPos = -100;
+                yPos += 50;
+            }
+            fill(255);
+            rect(xPos, yPos, 110, 30);
+        }
     }
 
     if(data5 != null) {
