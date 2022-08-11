@@ -91,12 +91,12 @@ function draw() {
     rect(0, windowHeight/2, windowWidth/2, windowHeight/2);
     fill(0);
     textSize(20);
-    text('Data Population', windowWidth/4, ((windowHeight/4)*2)+50);
+    text('Data Population - United States', windowWidth/4, ((windowHeight/4)*2)+50);
 
     fill(240, 150, 200);
     rect(windowWidth/2, windowHeight/2, windowWidth/2, windowHeight/2);
     fill(0);
-    text('Data Population', (windowWidth/4)*3, ((windowHeight/4)*2)+50);
+    text('Image Dog Generator', (windowWidth/4)*3, ((windowHeight/4)*2)+50);
 
     //text(users.results[0].name.first, 10, 10);
     if(data1 != null) {
@@ -138,17 +138,22 @@ function draw() {
         fill(0);
         textAlign(CENTER);
         textSize(20);
-        text(data4.data[0].Nation,windowWidth/4, 120 + (windowHeight/4) *2);
-        let xPos = -100;
-        let yPos = 420;
+        let xPos = 100;
+        let yPos = 380;
         for (let x = 0; x < 7; x++) {
-            xPos += 130;
+            xPos += 160;
             if(xPos > 170) {
-                xPos = -100;
+                xPos = 0;
                 yPos += 50;
             }
             fill(255);
-            rect(xPos, yPos, 110, 30);
+            rect(xPos+50, yPos, 150, 40);
+            fill(0);
+            textSize(12);
+            text(data4.data[x].Year, xPos+120, yPos +12);
+            fill(255, 0, 0);
+            textSize(18Ter);
+            text(data4.data[0].Population, xPos+120, yPos +30);
         }
     }
 
