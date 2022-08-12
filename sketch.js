@@ -119,6 +119,12 @@ function draw() {
         textAlign(CENTER);
         textSize(15);
         text('Time: '+data2.time.updateduk, (windowWidth/6) * 3, 120 + (windowHeight/4) - 225);
+        text(data2.bpi.USD.code, ((windowWidth/6) * 3)-90, 120 + (windowHeight/4) - 185);
+        text('Rate: '+data2.bpi.USD.rate, ((windowWidth/6) * 3)-45, 120 + (windowHeight/4) - 170);
+        text(data2.bpi.GBP.code, ((windowWidth/6) * 3)-90, 120 + (windowHeight/4) - 145);
+        text('Rate: '+data2.bpi.GBP.rate, ((windowWidth/6) * 3)-45, 120 + (windowHeight/4) - 130);
+        text(data2.bpi.EUR.code, ((windowWidth/6) * 3)-90, 120 + (windowHeight/4) - 105);
+        text('Rate: '+data2.bpi.EUR.rate, ((windowWidth/6) * 3)-45, 120 + (windowHeight/4) - 90);
     }
 
     if(data3 != null) {
@@ -153,7 +159,7 @@ function draw() {
             text(data4.data[x].Year, xPos+120, yPos +12);
             fill(255, 0, 0);
             textSize(18);
-            text(data4.data[0].Population, xPos+120, yPos +30);
+            text(data4.data[x].Population, xPos+120, yPos +30);
         }
     }
 
